@@ -45,6 +45,8 @@ def application(environ, start_response):
     start_response('200 OK', [('Content-Type', 'text/html; charset=utf-8')])
     return [html.encode('utf-8')]
 
+app = application
+
 if __name__ == '__main__':
     port = 8000
     print(f"Starting server on http://localhost:{port}/", file=sys.stderr)
